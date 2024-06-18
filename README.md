@@ -40,7 +40,7 @@ Welcome to StaySavvy, a full stack web application designed for booking stays. T
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/yourusername/staysavvy.git
+   git clone https://github.com/Amanpreet325/staysavvy.git
    cd staysavvy
    ```
 2. Install dependencies
