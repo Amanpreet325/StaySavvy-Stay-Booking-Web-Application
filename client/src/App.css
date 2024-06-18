@@ -1,0 +1,8 @@
+.nav-item {
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  color: red;
+}

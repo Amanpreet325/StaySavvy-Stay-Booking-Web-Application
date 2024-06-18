@@ -1,0 +1,14 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500&family=Roboto+Mono:wght@100&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.roboto-mono-200 {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 200;
+}

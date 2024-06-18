@@ -1,0 +1,243 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/login",
+        "request_method": "POST",
+        "headers": {
+          "Host": "localhost:3000",
+          "Connection": "keep-alive",
+          "Content-Length": "50",
+          "Sec-Ch-Ua": "\"Chromium\";v=\"124\", \"Microsoft Edge\";v=\"124\", \"Not-A.Brand\";v=\"99\"",
+          "Accept": "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0",
+          "Sec-Ch-Ua-Platform": "\"Windows\"",
+          "Origin": "http://localhost:5173",
+          "Sec-Fetch-Site": "same-site",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Dest": "empty",
+          "Referer": "http://localhost:5173/",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "en-US,en;q=0.9,en-IN;q=0.8",
+          "Cookie": "token="
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0,
+      "message": [
+        {
+          "name": "email",
+          "class": "String",
+          "value": "'aq@gmail.com'"
+        },
+        {
+          "name": "password",
+          "class": "String",
+          "value": "'aq@gmail.com'"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "id": 2,
+      "thread_id": 0,
+      "method_id": "findOne",
+      "static": false,
+      "receiver": {
+        "class": "Collection",
+        "value": "[Collection users]",
+        "object_id": 1
+      },
+      "parameters": [
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "email",
+              "class": "String"
+            }
+          ],
+          "value": "{ email: 'aq@gmail.com' }",
+          "object_id": 10,
+          "name": "filter"
+        },
+        {
+          "class": "Object",
+          "properties": [],
+          "value": "{}",
+          "object_id": 11,
+          "name": "options"
+        }
+      ],
+      "defined_class": "users",
+      "lineno": 2,
+      "path": "mongodb/users"
+    },
+    {
+      "event": "call",
+      "id": 3,
+      "thread_id": 0,
+      "method_id": "find",
+      "static": false,
+      "receiver": {
+        "class": "Collection",
+        "value": "[Collection users]",
+        "object_id": 1
+      },
+      "parameters": [
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "email",
+              "class": "String"
+            }
+          ],
+          "value": "{ email: 'aq@gmail.com' }",
+          "object_id": 10,
+          "name": "filter"
+        },
+        {
+          "class": "Object",
+          "properties": [],
+          "value": "{}",
+          "object_id": 11,
+          "name": "options"
+        }
+      ],
+      "defined_class": "users",
+      "lineno": 3,
+      "path": "mongodb/users"
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 4,
+      "parent_id": 3,
+      "return_value": {
+        "class": "FindCursor",
+        "value": "[FindCursor test.users]",
+        "object_id": 12
+      },
+      "elapsed": 0.0007435000006807968
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 5,
+      "parent_id": 2,
+      "return_value": {
+        "class": "Promise<Object>",
+        "value": "Promise {\n  {\n    _id: new ObjectId('66409bf868f11a904194a720'),\n    name: 'aps',\n    email: 'aq@gmail.com',\n    password: '$2a$10$lGiAVd31EwWm6syMlT/wfulzcZPjRokGwHjxVyg2939m/KZzIMpwy',\n    __v: 0\n  }\n}",
+        "object_id": 13
+      },
+      "elapsed": 1.9856369999997696
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "X-Powered-By": "Express",
+          "Access-Control-Allow-Origin": "http://localhost:5173",
+          "Vary": "Origin",
+          "Access-Control-Allow-Credentials": "true",
+          "Set-Cookie": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFxQGdtYWlsLmNvbSIsImlkIjoiNjY0MDliZjg2OGYxMWE5MDQxOTRhNzIwIiwiaWF0IjoxNzE2MDI0Mjg2fQ.3gB7rNfcCbzqjbqZpCny_HqK3L1suTKE_FEMtNGWEl8; Path=/",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "152",
+          "Etag": "W/\"98-IJ4MjJJeUE5nQAhPuTs80sJLZps\""
+        },
+        "return_value": {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "_id",
+              "class": "String"
+            },
+            {
+              "name": "name",
+              "class": "String"
+            },
+            {
+              "name": "email",
+              "class": "String"
+            },
+            {
+              "name": "password",
+              "class": "String"
+            },
+            {
+              "name": "__v",
+              "class": "Number"
+            }
+          ],
+          "value": "{\n  _id: '66409bf868f11a904194a720',\n  name: 'aps',\n  email: 'aq@gmail.com',\n  password: '$2a$10$lGiAVd31EwWm6syMlT/wfulzcZPjRokGwHjxVyg2939m/KZzIMpwy',\n  __v: 0\n}",
+          "object_id": 14
+        }
+      },
+      "id": 6,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 2.098991500000011
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.21.1",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v21.1.0"
+    },
+    "app": "api",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "POST /login (200) — 2024-05-18T09:24:44.858Z"
+  },
+  "classMap": [
+    {
+      "name": "mongodb",
+      "type": "package",
+      "children": [
+        {
+          "type": "class",
+          "name": "users",
+          "children": [
+            {
+              "type": "function",
+              "name": "findOne",
+              "static": false,
+              "location": "mongodb/users:2"
+            },
+            {
+              "type": "function",
+              "name": "find",
+              "static": false,
+              "location": "mongodb/users:3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "POST /login"
+        }
+      ]
+    }
+  ]
+}

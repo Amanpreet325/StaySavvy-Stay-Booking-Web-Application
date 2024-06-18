@@ -1,0 +1,18 @@
+{
+  "client": {
+    "name": "appmap-node",
+    "version": "2.21.1",
+    "url": "https://github.com/getappmap/appmap-node"
+  },
+  "language": {
+    "name": "javascript",
+    "engine": "Node.js",
+    "version": "v21.1.0"
+  },
+  "app": "api",
+  "recorder": {
+    "type": "requests",
+    "name": "requests"
+  },
+  "name": "GET /profile (304) — 2024-05-18T09:01:49.258Z"
+}
